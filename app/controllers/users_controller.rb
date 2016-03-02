@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
  def user_jobs
-   @jobs = Job.all
+   @jobs = Job.where(user_id: current_user.id)
  end
 
 
