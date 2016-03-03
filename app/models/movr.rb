@@ -3,6 +3,7 @@ class Movr < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :jobs
+  validates :license, presence: true
   validates :email, presence: true, length: { minimum: 4, maximum: 16 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
