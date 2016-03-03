@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @muvrs = Movr.all
-    @muvr = Movr.find_by(email: params[:email])
+    # @muvr = Movr.where(email: params[:email])
   end
 
   def update
